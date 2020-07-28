@@ -1,0 +1,341 @@
+%%
+% NCHU Bachelor Thesis Template
+%
+% 南昌航空大学毕业设计（论文） —— 使用 XeLaTeX 编译
+%
+% Copyright 2020 Hurley Huang
+%
+% The Current Maintainer of this work is Hurley Huang.
+%
+% Compile with: xelatex -> biber -> xelatex -> xelatex
+
+% 章节支持、单面打印：ctexbook
+\documentclass[UTF8,AutoFakeBold,AutoFakeSlant,zihao=-4,oneside,openany]{ctexbook}
+\usepackage[a4paper,left=3cm,right=2.6cm,top=3.5cm,bottom=2.9cm]{geometry}
+% 目前 29mm 最接近 Word 排版
+\usepackage{xeCJK}
+\usepackage{titletoc}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{pdfpages}
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pdfpages}
+
+% 设置参考文献编译后端为 biber，引用格式为 GB/T7714-2015 格式
+% 参考文献使用宏包见 https://github.com/hushidong/biblatex-gb7714-2015
+\usepackage[
+  backend=biber,
+  style=gb7714-2015,
+  gbalign=gb7714-2015,
+  gbnamefmt=lowercase,
+  gbpub=false,
+  doi=false,
+  url=false,
+  eprint=false,
+  isbn=false,
+]{biblatex}
+
+% 参考文献引用文件位于 misc/ref.bib
+\addbibresource{misc/ref.bib}
+
+% 西文字体默认为 Times New Roman
+\setromanfont{Times New Roman}
+% 论文题目字体为华文细黑
+\setCJKfamilyfont{xihei}{[STXIHEI.TTF]} % 若希望使用本机字体，也可以用 {STXihei} 来调用
+\newcommand{\xihei}{\CJKfamily{xihei}}
+
+% 论文中文题目
+\newcommand{\thesisTitle}{南昌航空大学本科生毕业设计（论文）题目}
+% 论文英文题目（可选）
+% \newcommand{\thesisTitleEN}{The Subject of Undergraduate Graduation Project (Thesis) of Beijing Institute of Technology}
+
+% 在这里填写你的相关信息
+\newcommand{\deptName}{软件学院}
+\newcommand{\majorName}{软件工程}
+\newcommand{\yourName}{黄XX}
+\newcommand{\yourStudentID}{152012XX}
+\newcommand{\mentorName}{陈XX}
+% 如果你的毕设为校外毕设，请将下面这一行语句解除注释（删除第一个百分号字符）并在第二组花括号中填写你的校外毕设导师名字
+% \newcommand{\externalMentorName}{左偏树}
+
+% 主题页面格式：NCHUThesis
+\fancypagestyle{NCHUThesis}{
+  % 页眉高度
+  \setlength{\headheight}{20pt}
+  % 页码高度（不完美，比规定稍微靠下 2mm）
+  \setlength{\footskip}{14pt}
+
+  \fancyhf{}
+  % 定义页眉、页码
+  \fancyhead[C]{\zihao{4}\ziju{0.08}\songti{南昌航空大学学士学位论文}}
+  \fancyfoot[C]{\songti\zihao{5} \thepage}
+  % 页眉分割线稍微粗一些
+  \renewcommand{\headrulewidth}{0.6pt}
+}
+
+% 设置章节格式
+% 一级标题：黑体，三号，加粗；间距：段前 0.5 行，段后 1 行；
+\ctexset{chapter={
+    name = {第,章},
+    number = {\arabic{chapter}},
+    format = {\heiti \bfseries \centering \zihao{3}},
+    aftername = \hspace{9bp},
+    pagestyle = NCHUThesis,
+    beforeskip = 8bp,
+    afterskip = 32bp,
+    fixskip = true,
+  }
+}
+
+% 二级标题：黑体，四号，加粗；间距：段前 0.5 行，段后 0 行；
+\ctexset{section={
+    number = {\thechapter.\hspace{4bp}\arabic{section}},
+    format = {\heiti \raggedright \bfseries \zihao{4}},
+    aftername = \hspace{8bp},
+    beforeskip = 20bp plus 1ex minus .2ex,
+    afterskip = 18bp plus .2ex,
+    fixskip = true,
+  }
+}
+
+% 三级标题：黑体、小四、加粗；间距：段前 0.5 行，段后 0 行；
+\ctexset{subsection={
+    number = {\thechapter.\hspace{3bp}\arabic{section}.\hspace{3bp}\arabic{subsection}},
+    format = {\heiti \bfseries \raggedright \zihao{-4}},
+    aftername = \hspace{7bp},
+    beforeskip = 17bp plus 1ex minus .2ex,
+    afterskip = 14bp plus .2ex,
+    fixskip = true,
+  }
+}
+
+% 设置目录样式
+% 添加 PDF 链接
+\addtocontents{toc}{\protect\hypersetup{hidelinks}}
+
+% 解决「目录」二字的格式问题
+\renewcommand{\contentsname}{
+  \fontsize{16pt}{\baselineskip}
+  \normalfont\heiti{目~~~~录}
+  \vspace{-8pt}
+}
+% 定义目录样式
+\titlecontents{chapter}[0pt]{\songti \zihao{-4}}
+{\thecontentslabel\hspace{\ccwd}}{}
+{\hspace{.5em}\titlerule*{.}\contentspage}
+\titlecontents{section}[1\ccwd]{\songti \zihao{-4}}
+{\thecontentslabel\hspace{\ccwd}}{}
+{\hspace{.5em}\titlerule*{.}\contentspage}
+\titlecontents{subsection}[2\ccwd]{\songti \zihao{-4}}
+{\thecontentslabel\hspace{\ccwd}}{}
+{\hspace{.5em}\titlerule*{.}\contentspage}
+
+% 前置页面（原创性声明、中英文摘要、目录等）
+\renewcommand{\frontmatter}{
+  \pagenumbering{Roman}
+  \pagestyle{NCHUThesis}
+}
+
+% 正文页面
+\renewcommand{\mainmatter}{
+  \pagenumbering{arabic}
+  \pagestyle{NCHUThesis}
+}
+
+% % 设置 caption 与 figure 之间的距离
+% \setlength{\abovecaptionskip}{11pt}
+% \setlength{\belowcaptionskip}{9pt}
+
+% % 设置图片的 caption 格式
+% \renewcommand{\thefigure}{\thechapter-\arabic{figure}}
+% \captionsetup[figure]{font=small,labelsep=space}
+
+% % 设置表格的 caption 格式和 caption 与 table 之间的垂直距离
+% \renewcommand{\thetable}{\thechapter-\arabic{table}}
+% \captionsetup[table]{font=small,labelsep=space,skip=2pt}
+
+%%% ---- 图表标题设置 ----- %%%
+\RequirePackage[labelsep=quad]{caption}     % 序号之后空一格写标题
+% 设置表格标题字体为黑体, 设置图标题字体为宋体
+\DeclareCaptionFont{heiti}{\heiti}
+\captionsetup[table]{textfont=heiti}
+\renewcommand\figurename{\songti\zihao{-4} 图}  
+\renewcommand\tablename{\heiti\zihao{-4} 表} 
+
+% 使用tabularx创建占满宽度的表格
+\RequirePackage{tabularx, makecell}
+\newcolumntype{L}{X}
+\newcolumntype{C}{>{\centering \arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft \arraybackslash}X}
+
+\RequirePackage{longtable}  % 做长表格的包
+\RequirePackage{booktabs}   % 做三线表的包
+
+% 列表样式
+\RequirePackage{enumerate, enumitem}
+\setlist{noitemsep}
+
+% 调整底层 TeX 排版引擎参数以保证所有段落能够很好地以两端对齐的方式呈现
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+% 设置数学公式编号格式
+\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
+
+\newcommand{\unnumchapter}[1]{
+  \chapter*{\vskip 10bp\textmd{#1} \vskip -6bp}
+  \addcontentsline{toc}{chapter}{#1}
+  \stepcounter{chapter}
+}
+
+% 公式引用使用中文括号
+\renewcommand{\eqref}[1]{\textup{{\normalfont（\ref{#1}）\normalfont}}}
+
+%%% ---- 引入宏包 ----- %%%
+\RequirePackage{amsmath, amssymb}
+\RequirePackage[amsmath,thmmarks]{ntheorem}  % 定理
+\RequirePackage{graphicx, subcaption}
+\RequirePackage{listings}                    % 代码段
+% \RequirePackage{minted}                    % 代码高亮（需要 python 安装 pygments 库）
+\RequirePackage[ruled,vlined]{algorithm2e}
+\RequirePackage{algorithmic}    % 算法代码
+\RequirePackage{tikz, pgfplots}              % 绘图
+\RequirePackage{fontspec, color, url, array}
+
+\RequirePackage{txfonts}                     % Times 风格（数学）字体
+
+%%% ---- 定义字体 ----- %%%
+\renewcommand{\normalsize}{\zihao{-4}}         % 正常字号
+% 设置英文字体为 Times New Roman
+\setmainfont[Ligatures=Rare]{Times New Roman}
+\setsansfont[Ligatures=Rare]{Times New Roman}
+\setmonofont[Ligatures=Rare]{Times New Roman}
+
+% 算法两字用中文显示
+\renewcommand{\algorithmcfname}{算法}
+
+\lstdefinestyle{code}{
+	backgroundcolor=\color{gray!10},   
+	commentstyle=\color{green!50!black},
+	keywordstyle=\color{blue},
+	stringstyle=\color{magenta},
+	basicstyle=\linespread{1}\footnotesize\ttfamily,
+	numberstyle=\tiny,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=t,   
+	frame=single,
+	keepspaces=true,         
+	language=java,        
+	numbers=none,             
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2,
+	aboveskip=1em,
+	belowskip=1em,
+	belowcaptionskip=12pt
+}
+
+% 修改脚注
+\makeatletter%
+\long\def\@makefnmark{%
+\hbox {{\normalfont \textsuperscript{\circled{\@thefnmark}}}}}%
+\makeatother
+\makeatletter%
+\long\def\@makefntext#1{%
+  \parindent 1em\noindent \hb@xt@ 1.8em{\hss \circled{\@thefnmark}}#1}%
+\makeatother
+\skip\footins=10mm plus 1mm
+\footnotesep=6pt
+\renewcommand{\footnotesize}{\songti\zihao{5}}
+\renewcommand\footnoterule{\vspace*{-3pt}\hrule width 0.3\columnwidth height 1pt \vspace*{2.6pt}}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
+\node[shape=circle,draw,inner sep=0.5pt] (char) {#1};}} % 圆圈数字①
+
+%%% ---- 数学定理样式 ----- %%%
+\theoremstyle{plain}
+\theoremheaderfont{\heiti}
+\theorembodyfont{\songti} \theoremindent0em
+\theorempreskip{0pt}
+\theorempostskip{0pt}
+\theoremnumbering{arabic}
+%\theoremsymbol{} %定理结束时自动添加的标志
+\newtheorem{theorem}{\hspace{2em}定理}[section]
+\newtheorem{definition}{\hspace{2em}定义}[section]
+\newtheorem{lemma}{\hspace{2em}引理}[section]
+\newtheorem{corollary}{\hspace{2em}推论}[section]
+\newtheorem{proposition}{\hspace{2em}性质}[section]
+\newtheorem{example}{\hspace{2em}例}[section]
+\newtheorem{remark}{\hspace{2em}注}[section]
+
+\theoremstyle{nonumberplain}
+\theoremheaderfont{\heiti}
+\theorembodyfont{\normalfont \rm \songti}
+\theoremindent0em \theoremseparator{\hspace{1em}}
+\theoremsymbol{$\square$}
+\newtheorem{proof}{\hspace{2em}证明}
+
+% 文档开始
+\begin{document}
+
+% 标题页面：如无特殊需要，本部分无需改动
+\input{misc/0_cover.tex}
+
+% 前置页面定义
+\frontmatter
+% 原创性声明：如无特殊需要，本部分无需改动
+% 更改为 PDF 页面插入，如需要添加内容，可考虑先用 Word 制作再覆盖 misc/1_originality.pdf
+\includepdf{misc/1_originality.pdf}
+\newpage
+% \input{misc/1_originality.tex}
+% 摘要：在摘要相应的 TeX 文件处进行摘要部分的撰写
+\input{chapters/0_abstract.tex}
+% 目录：如无特殊需要，本部分无需改动
+\input{misc/2_toc.tex}
+
+% 正文开始
+\mainmatter
+% 正文 22 磅的行距
+\setlength{\parskip}{0em}
+\renewcommand{\baselinestretch}{1.53}
+% 修复脚注出现跨页的问题
+\interfootnotelinepenalty=10000
+
+% 第一章
+\input{chapters/1_chapter1.tex}
+% 第二章
+\input{chapters/2_chapter2.tex}
+% 第三章
+\input{chapters/3_chapter3.tex}
+% 第四章
+\input{chapters/4_chapter4.tex}
+
+% 结论：在结论相应的 TeX 文件处进行结论部分的撰写
+\input{misc/3_conclusion.tex}
+% 参考文献：如无特殊需要，参考文献相应的 TeX 文件无需改动，添加参考文献请使用 BibTeX 的格式
+%   添加至 misc/ref.bib 中，并在正文的相应位置使用 \cite{xxx} 的格式引用参考文献
+\input{misc/4_reference.tex}
+% 附录：在附录相应的 TeX 文件处进行附录部分的撰写
+\input{misc/5_appendix.tex}
+% 致谢：在致谢相应的 TeX 文件处进行致谢部分的撰写
+\input{misc/6_acknowledgements.tex}
+
+\end{document}

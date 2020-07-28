@@ -1,0 +1,205 @@
+%%
+% NCHU Bachelor Thesis Template
+%
+% 南昌航空大学毕业设计（论文）中英文摘要 —— 使用 XeLaTeX 编译
+%
+% Copyright 2020 Hurley Huang
+%
+% The Current Maintainer of this work is Hurley Huang.
+
+% 公式插图表格
+
+\chapter{公式插图表格}
+
+\section{公式的使用}
+
+文中引用公式可以是：$a^2+b^2=c^2$。
+
+单独一段引用公式可以是：
+
+\begin{equation}
+    \sin^2{\theta}+\cos^2{\theta}=1 \label{eq:pingfanghe}
+\end{equation}
+
+通过添加标签在正文中引用公式，如式\eqref{eq:pingfanghe}。
+
+多行对齐的公式：
+
+\begin{equation}
+  \begin{aligned}
+    f_1(x)&=(x+y)^2\\
+          &=x^2+2xy+y^2
+  \end{aligned}
+\end{equation}
+
+\section{插图的使用}
+
+图示例如下：
+
+\begin{figure}[htbp]
+	\begin{center}
+	    \vspace{13pt} % 调整图片与上文的垂直距离
+		\includegraphics[width = 0.3\textwidth]{images/nchu_logo.png}
+		\caption{图片标题} 
+		\label{图片标题序号} % label 用来在文中索引
+	\end{center}
+\end{figure}
+
+\section{表格的使用}
+
+表格的输入可以考虑使用在线的工具，如~\href{https://www.tablesgenerator.com/}{Tables Generator}~能便捷地创建表格。
+
+\subsection{普通表格}
+下面是一些普通表格的示例：
+
+\begin{table}[ht]
+  \centering
+  \caption{简单表格}
+  \label{tab:1}
+  \begin{tabular}{|l|c|r|}
+    \hline
+    一& 二 & 三\\
+    \hline
+    A& B& C\\
+    \hline
+  \end{tabular}
+\end{table}
+
+\begin{table}[ht]
+  \centering
+  \caption{简单三线表}
+  \label{tab:2}
+  \begin{tabular}{ccc}
+    \hline
+    姓名& 学号& 性别\\
+    \hline
+    张三& 001& 男\\
+    李四& 002& 女\\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsection{跨页表格}
+
+跨页表格常用于附录。
+
+{\centering
+  \begin{longtable}{ccccccccc}
+  \caption{跨页表格示例} \\
+  \toprule
+  1     & 0 & 5  & 1  & 2  & 3  & 4  &  5 & 6 \\
+  \midrule
+  \endfirsthead
+
+  \multicolumn{1}{l}{接上一页} \\
+  \toprule
+  1     & 0 & 5  & 1  & 2  & 3  & 4  &  5 & 6 \\
+  \midrule
+  \endhead
+
+  \bottomrule
+  \hline \\
+  \multicolumn{9}{r}{{转下一页}} \\
+  \endfoot
+
+  \bottomrule
+  \endlastfoot    
+
+  1     & 0 & 5  & 1  & 2  & 3  & 4  &  5 & 6 \\
+  1     & 0 & 5  & 1  & 2  & 3  & 4  &  5 & 6 \\
+  1     & 0 & 5  & 1  & 2  & 3  & 4  &  5 & 6 \\
+  1     & 0 & 5  & 1  & 2  & 3  & 4  &  5 & 6 \\
+  1     & 0 & 5  & 1  & 2  & 3  & 4  &  5 & 6 \\
+  1     & 0 & 5  & 1  & 2  & 3  & 4  &  5 & 6 \\
+  1     & 0 & 5  & 1  & 2  & 3  & 4  &  5 & 6 \\
+  1     & 0 & 5  & 1  & 2  & 3  & 4  &  5 & 6 \\
+  1     & 0 & 5  & 1  & 2  & 3  & 4  &  5 & 6 \\
+  1     & 0 & 5  & 1  & 2  & 3  & 4  &  5 & 6 \\
+  1     & 0 & 5  & 1  & 2  & 3  & 4  &  5 & 6 \\
+  1     & 0 & 5  & 1  & 2  & 3  & 4  &  5 & 6 \\
+  1     & 0 & 5  & 1  & 2  & 3  & 4  &  5 & 6 \\
+  1     & 0 & 5  & 1  & 2  & 3  & 4  &  5 & 6 \\
+  1     & 0 & 5  & 1  & 2  & 3  & 4  &  5 & 6 \\
+  
+  \end{longtable}
+}
+
+\subsection{统计表格}
+
+统计表格一般是以三线表的形式。
+
+\begin{table}[ht]
+  \centering
+  \caption{统计数据表格}
+  \label{tab:3}
+  \begin{tabularx}{\textwidth}{CCCC}
+    \toprule
+    序号&年龄&身高&体重\\
+    \midrule
+    1&14&156&42\\
+    2&16&158&45\\
+    3&14&162&48\\
+    4&15&163&50\\
+    \cmidrule{2-4} %添加2-4列的中线
+    平均&15&159.75&46.25\\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\section{列表的使用}
+
+\subsection{有序列表}
+
+即有序列表。
+
+\begin{enumerate}
+    \item 第一项
+        \begin{enumerate}
+            \item 第一项中的第一项
+            \item 第一项中的第二项
+        \end{enumerate}
+    \item 第二项
+        \begin{enumerate}[label=(\roman*)]
+            \item 第一项中的第一项
+            \item 第一项中的第二项
+        \end{enumerate}
+    \item 第三项
+\end{enumerate}
+
+\subsection{无序列表}
+
+即不计数列表。
+
+\begin{itemize}
+    \item 第一项
+        \begin{itemize}
+            \item 第一项中的第一项
+            \item 第一项中的第二项
+        \end{itemize}
+    \item 第二项
+    \item 第三项
+\end{itemize}
+
+\section{定理的使用}
+
+\begin{theorem}
+  设向量$\boldsymbol a\neq\boldsymbol 0$，那么向量$\boldsymbol b//\boldsymbol a$的充分必要条件是：存在唯一的实数$\lambda$，使$\boldsymbol b=\lambda \boldsymbol a$。
+\end{theorem}
+\begin{definition}
+  这是一条定义。
+\end{definition}
+\begin{lemma}
+  这是一条引理。
+\end{lemma}
+\begin{corollary}
+  对数轴上任意一点$P$，轴上有向线段$\vec {OP}$都可唯一地表示为点$P$的坐标与轴上单位向量$\boldsymbol e_u$的乘积：$\vec {OP}=u \boldsymbol e_u$。
+\end{corollary}
+\begin{proposition}
+  这是一条性质。
+\end{proposition}
+\begin{example}
+  这是一条例。
+\end{example}
+\begin{remark}
+  这是一条注。
+\end{remark}

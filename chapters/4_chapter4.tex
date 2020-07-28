@@ -1,0 +1,37 @@
+%%
+% NCHU Bachelor Thesis Template
+%
+% 南昌航空大学毕业设计（论文）中英文摘要 —— 使用 XeLaTeX 编译
+%
+% Copyright 2020 Hurley Huang
+%
+% The Current Maintainer of this work is Hurley Huang.
+
+% 代码
+
+\chapter{代码}
+
+\section{代码块高亮}
+
+\begin{lstlisting}[style=code]
+YourSmartContract contract = YourSmartContract.load("0x<address>|<ensName>", <web3j>, <credentials>, GAS_PRICE, GAS_LIMIT);
+\end{lstlisting}
+
+\section{算法描述/伪代码}
+
+\begin{algorithm}[H]
+  \setstretch{1.5} % 代码间行距设定
+  \SetAlgoLined
+  \KwResult{Write here the result }
+   initialization\;
+   \While{While condition}{
+    instructions\;
+    \eIf{condition}{
+     instructions1\;
+     }{
+     instructions3\;
+    }
+   }
+  \caption{How to write algorithms}
+\end{algorithm}
+
