@@ -1,6 +1,6 @@
 # 南昌航空大学本科毕业论文LaTex模版
 
-[English Version]()
+[English Version](README-EN.md)
 
 本项目为非官方的南昌航空大学**本科生**毕业论文LaTex模版。
 
@@ -8,9 +8,7 @@
 
 ## 样例展示
 
-![](https://raw.githubusercontent.com/HurleyJames/ImageHosting/master/CleanShot%202020-07-28%20at%2022.23.59.png)
-
-正文样例可以参照[PDF样例文档](main.pdf)
+![](https://raw.githubusercontent.com/HurleyJames/ImageHosting/master/CleanShot%202020-07-28%20at%2022.33.00.png)正文样例可以参照[PDF样例文档](main.pdf)
 
 ## 项目结构
 
@@ -56,6 +54,8 @@ Download ZIP 或者 `git clone`。
 ### Overleaf 在线编译
 
 Overleaf 是一个十分方便的网页版在线 LaTeX 编辑器。如果是 Overleaf 会员用户的话，甚至可以与 Github 同步。
+
+![](https://raw.githubusercontent.com/HurleyJames/ImageHosting/master/CleanShot%202020-07-28%20at%2022.23.59.png)
 
 1. 在本项目界面，选择 Download ZIP
 2. 在 Overleaf 页面的 New Project，Upload Project，上传第1步下载的zip文件
