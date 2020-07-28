@@ -18,9 +18,9 @@
 ├── chapters
 │   ├── 0_abstract.tex
 │   ├── 1_chapter1.tex
-│	├── 2_chapter2.tex
+│   ├── 2_chapter2.tex
 |   ├── 3_chapter3.tex
-|	└── 4_chapter4.tex
+|   └── 4_chapter4.tex
 ├── images
 │   ├── nchu_logo.png
 │   └── header.png
