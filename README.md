@@ -29,7 +29,7 @@
 └── misc
     ├── 0_cover.tex
     ├── 1_originality.tex
-	├── 1_originality.pdf
+    ├── 1_originality.pdf
     ├── 2_toc.tex
     ├── 3_conclusion.tex
     ├── 4_reference.tex
