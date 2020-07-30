@@ -1,10 +1,10 @@
-# 南昌航空大学本科毕业论文LaTex模版
+# 南昌航空大学本科毕业论文LaTeX模版
 
 [English Version](README-EN.md)
 
-本项目为非官方的南昌航空大学**本科生**毕业论文LaTex模版。
+本项目为非官方的南昌航空大学**本科生**毕业论文LaTeX模版。
 
-本模版由武汉大学毕业论文LaTex模版[mtobeiyf/whu-thesis](https://github.com/mtobeiyf/whu-thesis)和北京理工大学本科生毕业设计（论文）模版[BITNP/BIThesis](https://github.com/BITNP/BIThesis)修改而成，特此表示衷心的感谢！
+本模版由武汉大学毕业论文LaTeX模版[mtobeiyf/whu-thesis](https://github.com/mtobeiyf/whu-thesis)和北京理工大学本科生毕业设计（论文）模版[BITNP/BIThesis](https://github.com/BITNP/BIThesis)修改而成，特此表示衷心的感谢！
 
 ## 样例展示
 
@@ -63,7 +63,7 @@ Overleaf 是一个十分方便的网页版在线 LaTeX 编辑器。如果是 Ove
 
 ### 本地编译
 
-本地编译需要安装 TeX 发行版软件，例如 TeX Live、MacTex 和 MikTeX，这些发行版都自带了基本的 LaTeX 编译工具。
+本地编译需要安装 TeX 发行版软件，例如 TeX Live、MacTeX 和 MikTeX，这些发行版都自带了基本的 LaTeX 编译工具。
 
 **注意**：系统需要安装有宋体（SimSun）和黑体（SimHei）字体以及 Times New Roman 英文字体，并请不要使用 CTeX。
 
@@ -91,10 +91,10 @@ Overleaf 是一个十分方便的网页版在线 LaTeX 编辑器。如果是 Ove
 
     即在 Tex Live 环境下，
 
-    1. 先使用 XeLaTex 编译一遍；
-    2. 再使用 BibTex 编译一遍；
-    3. 再使用 XeLaTex 编译一遍；
-    4. 如果引用号码未成功显示，可以使用 XeLaTex 再编译一遍；
+    1. 先使用 XeLaTeX 编译一遍；
+    2. 再使用 BibTeX 编译一遍；
+    3. 再使用 XeLaTeX 编译一遍；
+    4. 如果引用号码未成功显示，可以使用 XeLaTeX 再编译一遍；
 
 5. 如果是使用 MikTeX，中途会提示安装宏包。等左下角再次显示`√`，再点击，选择第二项`View LaTeX PDF`，即可进行预览。
 
