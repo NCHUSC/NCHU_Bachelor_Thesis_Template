@@ -2,11 +2,11 @@
 
 This project is an unofficial LaTeX template for **undergraduate** thesis of Nanchang Hangkong University.
 
-This template is modified from the Wuhan University Thesis Template and the Beijing Institute of Technology Thesis Template with sincere thanks!
+This template is modified from [the Wuhan University Thesis Template](https://github.com/mtobeiyf/whu-thesis) and [the Beijing Institute of Technology Thesis Template](https://github.com/BITNP/BIThesis) with sincere thanks!
 
 ## Sample Display
 
-![](https://raw.githubusercontent.com/HurleyJames/ImageHosting/master/CleanShot%202020-07-28%20at%2022.33.00.png)
+![](https://i.loli.net/2021/01/31/ErnqwjiL3cWGMu8.png)
 
 Please refer to [PDF sample document](main.pdf).
 
@@ -14,22 +14,25 @@ Please refer to [PDF sample document](main.pdf).
 
 ```
 .
+├── README-EN.md
 ├── README.md
+├── LICENSE
+├── STXIHEI.TTF
 ├── chapters
 │   ├── 0_abstract.tex
 │   ├── 1_chapter1.tex
-│	├── 2_chapter2.tex
-|   ├── 3_chapter3.tex
-|	└── 4_chapter4.tex
+│   ├── 2_chapter2.tex
+│   ├── 3_chapter3.tex
+│   └── 4_chapter4.tex
 ├── images
-│   ├── nchu_logo.png
-│   └── header.png
+│   ├── header.png
+│   └── nchu_logo.png
 ├── main.pdf
 ├── main.tex
 └── misc
     ├── 0_cover.tex
-    ├── 1_originality.tex
     ├── 1_originality.pdf
+    ├── 1_originality.tex
     ├── 2_toc.tex
     ├── 3_conclusion.tex
     ├── 4_reference.tex
@@ -55,7 +58,7 @@ There are two methods to edit and compile LaTeX template:
 
 Overleaf is a very convenient web-based online LaTeX editor. If you are an Overleaf premium user, you can sync with Github and even get some premium features.
 
-![](https://raw.githubusercontent.com/HurleyJames/ImageHosting/master/CleanShot 2020-07-28 at 22.23.59.png)
+![](https://i.loli.net/2021/01/31/OMbfg7Pza3xdGlR.png)
 
 1. In this project interface, click `Download ZIP`
 2. `New Project -> Upload Project`, upload the .zip file downloaded in step 1
@@ -89,7 +92,7 @@ You can install TeX Live or MikTeX in the system.
 
 4. Select the first item `xelatex-> bibtex-> xelatex x 2`.
 
-    In the TeX Live environment, 
+    In the TeX Live environment,
 
     1. First use XeLaTeX to compile it
     2. Use BibTeX to compile it again
@@ -99,11 +102,11 @@ You can install TeX Live or MikTeX in the system.
 
 ## Feedback
 
-This template is still being maintained. If you encounter any problems using this template, you can [email me](hurleyhuang@hotmail.com), or leave a message in [Issues](https://github.com/NCHUSC/NCHU_Bachelor_Thesis_Template/issues), or access into my [personal website](https://hurley.fun).
+This template is still being maintained. If you encounter any problems using this template, you can [email me](hurleyhuang@hotmail.com), or leave a message in [Issues](https://github.com/NCHUSC/NCHU_Bachelor_Thesis_Template/issues), or access into my [personal homepage](https://withh.life).
 
 ## Follow-up Plan
 
 * Support proposal report, lab report, etc.
 * Support postgraduate thesis template, etc.
-* Welcome to Pull Request.
+* Welcome to `Pull Request`.
 

@@ -1,35 +1,40 @@
-# 南昌航空大学本科毕业论文LaTeX模版
+ # 南昌航空大学本科毕业论文 LaTeX 模版
 
 [English Version](README-EN.md)
 
-本项目为非官方的南昌航空大学**本科生**毕业论文LaTeX模版。
+本项目为非官方的南昌航空大学**本科生**毕业论文 LaTeX 模版。
 
-本模版由武汉大学毕业论文LaTeX模版[mtobeiyf/whu-thesis](https://github.com/mtobeiyf/whu-thesis)和北京理工大学本科生毕业设计（论文）模版[BITNP/BIThesis](https://github.com/BITNP/BIThesis)修改而成，特此表示衷心的感谢！
+本模版由武汉大学毕业论文 LaTeX 模版 [mtobeiyf/whu-thesis](https://github.com/mtobeiyf/whu-thesis) 和北京理工大学本科生毕业设计（论文）模版 [BITNP/BIThesis](https://github.com/BITNP/BIThesis) 修改而成，特此表示衷心的感谢！
 
 ## 样例展示
 
-![](https://raw.githubusercontent.com/HurleyJames/ImageHosting/master/CleanShot%202020-07-28%20at%2022.33.00.png)正文样例可以参照[PDF样例文档](main.pdf)
+![](https://i.loli.net/2021/01/31/ErnqwjiL3cWGMu8.png)
+
+正文样例可以参照[PDF样例文档](main.pdf)
 
 ## 项目结构
 
 ```
 .
+├── README-EN.md
 ├── README.md
+├── LICENSE
+├── STXIHEI.TTF
 ├── chapters
 │   ├── 0_abstract.tex
 │   ├── 1_chapter1.tex
-│   ├── 2_chapter2.tex
-|   ├── 3_chapter3.tex
-|   └── 4_chapter4.tex
+│   ├── 2_chapter2.tex
+│   ├── 3_chapter3.tex
+│   └── 4_chapter4.tex
 ├── images
-│   ├── nchu_logo.png
-│   └── header.png
+│   ├── header.png
+│   └── nchu_logo.png
 ├── main.pdf
 ├── main.tex
 └── misc
     ├── 0_cover.tex
-    ├── 1_originality.tex
     ├── 1_originality.pdf
+    ├── 1_originality.tex
     ├── 2_toc.tex
     ├── 3_conclusion.tex
     ├── 4_reference.tex
@@ -40,7 +45,7 @@
 
 ## 下载方式
 
-Download ZIP 或者 `git clone`。
+Download ZIP 或者`git clone`。
 
 ## 使用方法
 
@@ -55,10 +60,10 @@ Download ZIP 或者 `git clone`。
 
 Overleaf 是一个十分方便的网页版在线 LaTeX 编辑器。如果是 Overleaf 会员用户的话，甚至可以与 Github 同步。
 
-![](https://raw.githubusercontent.com/HurleyJames/ImageHosting/master/CleanShot%202020-07-28%20at%2022.23.59.png)
+![](https://i.loli.net/2021/01/31/OMbfg7Pza3xdGlR.png)
 
 1. 在本项目界面，选择 Download ZIP
-2. 在 Overleaf 页面的 New Project，Upload Project，上传第1步下载的zip文件
+2. 在 Overleaf 页面的 New Project，Upload Project，上传第 1 步下载的 zip 文件
 3. 点击左上角的 Menu 按钮，设置 Compiler 类型为 XeLaTeX，然后点击 Recompiler，即可查看编译好的页面
 
 ### 本地编译
@@ -100,7 +105,7 @@ Overleaf 是一个十分方便的网页版在线 LaTeX 编辑器。如果是 Ove
 
 ## 问题反馈
 
-本模板仍在维护，如果在使用本模板遇到任何问题，可以[发邮件给我](hurleyhuang@hotmai.com)，或者在[Issues](https://github.com/NCHUSC/NCHU_Bachelor_Thesis_Template/issues)中留言，亦可前往[我的个人网站](https://hurley.fun)。
+本模板仍在维护，如果在使用本模板遇到任何问题，可以[发邮件给我](hurleyhuang@hotmail.com)，或者在 [Issues](https://github.com/NCHUSC/NCHU_Bachelor_Thesis_Template/issues) 中留言，亦可前往我的[个人主页](https://withh.life)。
 
 ## 后续计划
 
