@@ -146,6 +146,54 @@
   \end{tabularx}
 \end{table}
 
+\subsection{复杂表格}
+
+下面是一个复杂三线表的样式。
+
+\begin{table}[H]
+  \centering
+  \caption{复杂三线表}
+  \begin{tabular}{l c c rrrrrrr}
+    \hline\hline
+    Audio & Audibility & Decision & \multicolumn{7}{c}{Sum of Extracted Bits}
+    \\ [0.5ex]
+    \hline
+    \multirow{3}{*}{Police} & \multirow{3}{*}{5} & soft & 1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\
+    & & mid & 2 & $-4$ & 4 & 4 & $-2$ & $-4$ & 4 \\
+    & & hard & 1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\
+    \multirow{3}{*}{Beethoven} & \multirow{3}{*}{1} & soft & 1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\
+    & & mid & 1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\
+    & & hard & 8 & $-8$ & 2 & 8 & $-8$ & $-8$ & 6 \\
+    \multirow{3}{*}{Metallica} & \multirow{3}{*}{1} & soft & 1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\
+    & & mid & 1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\
+    & & hard & 4 & $-8$ & 8 & 4 & $-8$ & $-8$ & 8 \\
+
+    % Entering 1st row
+    % & & soft & 1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\[-1ex]
+    % \raisebox{1.5ex}{Police} & \raisebox{1.5ex}{5} & hard
+    % & 2 & $-4$ & 4 & 4 & $-2$ & $-4$ & 4 \\[1ex]
+    % % Entering 2nd row
+    % & & soft & 1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\[-1ex]
+    % \raisebox{1.5ex}{Beethoven} & \raisebox{1.5ex}{5} & hard
+    % & 8 & $-8$ & 2 & 8 & $-8$ & $-8$ & 6 \\[1ex]
+    % % Entering 3rd row
+    % & & soft & 1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\[-1ex]
+    % \raisebox{1.5ex}{Metallica} & \raisebox{1.5ex}{5} & hard
+    % & 4 & $-8$ & 8 & 4 & $-8$ & $-8$ & 8 \\[1ex]
+
+    % Entering 4rd row
+    % & & soft & 1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\[-1ex]
+    % \raisebox{1.5ex}{Test} & \raisebox{1.5ex}{1} & mid
+    % & 4 & $-8$ & 8 & 4 & $-8$ & $-8$ & 8 \\[0ex] & hard
+    % & 4 & $-8$ & 8 & 4 & $-8$ & $-8$ & 8 \\[1ex]
+
+
+    % [1ex] adds vertical space
+    \hline % inserts single-line
+  \end{tabular}
+  \label{tab:PPer}
+\end{table}
+
 \section{列表的使用}
 
 \subsection{有序列表}
