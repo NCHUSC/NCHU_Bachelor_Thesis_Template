@@ -105,7 +105,7 @@ Overleaf 是一个十分方便的网页版在线 LaTeX 编辑器。如果是 Ove
 
 ## 问题反馈
 
-本模板仍在维护，如果在使用本模板遇到任何问题，可以[发邮件给我](hurleyhuang@hotmail.com)，或者在 [Issues](https://github.com/NCHUSC/NCHU_Bachelor_Thesis_Template/issues) 中留言，亦可前往我的[个人主页](https://withh.life)。
+本模板仍在维护，如果在使用本模板遇到任何问题，可以[发邮件给我](hurleyhuang@hotmail.com)，或者在 [Issues](https://github.com/NCHUSC/NCHU_Bachelor_Thesis_Template/issues) 中留言，亦可前往我的[个人主页](https://hurleywong.com)。
 
 ## 后续计划
 
