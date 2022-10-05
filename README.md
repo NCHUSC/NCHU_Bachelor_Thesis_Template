@@ -57,6 +57,7 @@ Download ZIP 或者`git clone`。
 > 推荐使用 Overleaf 在线编译的方式。
 
 ### Overleaf 在线编译
+**强烈建议大家使用**  
 
 Overleaf 是一个十分方便的网页版在线 LaTeX 编辑器。如果是 Overleaf 会员用户的话，甚至可以与 Github 同步。
 
@@ -92,14 +93,9 @@ Overleaf 是一个十分方便的网页版在线 LaTeX 编辑器。如果是 Ove
 
 3. 点击打开`main.tex`文件，点击左下角的`√`的符号，选择第一项`Build LaTex Project`
 
-4. 选择第一项`xelatex-> bibtex-> xelatex x 2`
+4. 选择`Recipe: latexmk (xelatex)`
 
-    即在 Tex Live 环境下，
-
-    1. 先使用 XeLaTeX 编译一遍；
-    2. 再使用 BibTeX 编译一遍；
-    3. 再使用 XeLaTeX 编译一遍；
-    4. 如果引用号码未成功显示，可以使用 XeLaTeX 再编译一遍；
+    即在 Tex Live 环境下，使用xekatexmk进行编译
 
 5. 如果是使用 MikTeX，中途会提示安装宏包。等左下角再次显示`√`，再点击，选择第二项`View LaTeX PDF`，即可进行预览。
 

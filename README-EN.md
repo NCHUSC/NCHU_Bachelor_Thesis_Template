@@ -56,6 +56,8 @@ There are two methods to edit and compile LaTeX template:
 
 ### Overleaf
 
+**Strongly Recommended**
+
 Overleaf is a very convenient web-based online LaTeX editor. If you are an Overleaf premium user, you can sync with Github and even get some premium features.
 
 ![](https://i.loli.net/2021/01/31/OMbfg7Pza3xdGlR.png)
@@ -90,15 +92,11 @@ You can install TeX Live or MikTeX in the system.
 
 3. Click to open the `main.tex` file, click the `√` in the lower left corner, and select the first item `Build LaTeX Project`.
 
-4. Select the first item `xelatex-> bibtex-> xelatex x 2`.
+4. Select the first item `Recipe: latexmk (xelatex)`.
 
-    In the TeX Live environment,
+    In the TeX Live environment, use xelatexmk to compile the project.
 
-    1. First use XeLaTeX to compile it
-    2. Use BibTeX to compile it again
-    3. Use XeLaTeX to compile again
-    4. If the reference number is not displayed successfully, use XeLaTeX to compile it again
-    5. If you are using MikTeX, you will be prompted to install the macro package midway. Wait util `√` is displayed again in the lower left corner, and then click to select the second item `View LaTeX PDF` to preview.
+5. If you are using MikTeX, you will be prompted to install the macro package midway. Wait util `√` is displayed again in the lower left corner, and then click to select the second item `View LaTeX PDF` to preview.
 
 ## Feedback
 
