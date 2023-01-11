@@ -11,7 +11,7 @@
 
 % 章节支持、单面打印：ctexbook
 \documentclass[UTF8,AutoFakeBold,AutoFakeSlant,zihao=-4,oneside,openany]{ctexbook}
-\usepackage[a4paper,left=3cm,right=2.6cm,top=3.5cm,bottom=2.9cm]{geometry}
+\usepackage[a4paper,left=3.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
 % 目前 29mm 最接近 Word 排版
 \usepackage{xeCJK}
 \usepackage{titletoc}
@@ -34,6 +34,7 @@
 \usepackage{amssymb}
 \usepackage{pdfpages}
 \usepackage{float}
+\usepackage[section]{placeins}
 
 % 设置参考文献编译后端为 biber，引用格式为 GB/T7714-2015 格式
 % 参考文献使用宏包见 https://github.com/hushidong/biblatex-gb7714-2015
@@ -81,18 +82,18 @@
 
   \fancyhf{}
   % 定义页眉、页码
-  \fancyhead[C]{\zihao{4}\ziju{0.08}\songti{南昌航空大学学士学位论文}}
-  \fancyfoot[C]{\songti\zihao{5} \thepage}
+  \fancyhead[C]{\zihao{5}\ziju{0.08}\songti{南昌航空大学学士学位论文}}
+  \fancyfoot[C]{\songti\zihao{-5} \thepage}
   % 页眉分割线稍微粗一些
   \renewcommand{\headrulewidth}{0.6pt}
 }
 
 % 设置章节格式
-% 一级标题：黑体，三号，加粗；间距：段前 0.5 行，段后 1 行；
+% 一级标题：宋体，小三号，加粗；间距：段前 0.5 行，段后 1 行；
 \ctexset{chapter={
     name = {第,章},
     number = {\arabic{chapter}},
-    format = {\heiti \bfseries \centering \zihao{3}},
+    format = {\songti \bfseries \centering \zihao{-3}},
     aftername = \hspace{9bp},
     pagestyle = NCHUThesis,
     beforeskip = 8bp,
@@ -101,10 +102,10 @@
   }
 }
 
-% 二级标题：黑体，四号，加粗；间距：段前 0.5 行，段后 0 行；
+% 二级标题：宋体，四号，加粗；间距：段前 0.5 行，段后 0 行；
 \ctexset{section={
     number = {\thechapter.\hspace{4bp}\arabic{section}},
-    format = {\heiti \raggedright \bfseries \zihao{4}},
+    format = {\songti \raggedright \bfseries \zihao{4}},
     aftername = \hspace{8bp},
     beforeskip = 20bp plus 1ex minus .2ex,
     afterskip = 18bp plus .2ex,
@@ -112,10 +113,10 @@
   }
 }
 
-% 三级标题：黑体、小四、加粗；间距：段前 0.5 行，段后 0 行；
+% 三级标题：黑宋体、小四、加粗；间距：段前 0.5 行，段后 0 行；
 \ctexset{subsection={
     number = {\thechapter.\hspace{3bp}\arabic{section}.\hspace{3bp}\arabic{subsection}},
-    format = {\heiti \bfseries \raggedright \zihao{-4}},
+    format = {\songti \bfseries \raggedright \zihao{-4}},
     aftername = \hspace{7bp},
     beforeskip = 17bp plus 1ex minus .2ex,
     afterskip = 14bp plus .2ex,
