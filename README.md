@@ -51,8 +51,8 @@ Download ZIP 或者`git clone`。
 
 有两种方式进行编辑和编译：
 
-* [Overleaf 在线编译]()
-* [本地编译]()
+* Overleaf 在线编译
+* 本地编译
 
 > 推荐使用 Overleaf 在线编译的方式。
 

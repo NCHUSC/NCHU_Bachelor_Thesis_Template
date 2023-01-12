@@ -49,8 +49,8 @@ Download ZIP or `git clone`
 
 There are two methods to edit and compile LaTeX template:
 
-* [Overleaf]()
-* [Local]()
+* Overleaf
+* Local
 
 > It is recommended to use Overleaf online compliation.
 
