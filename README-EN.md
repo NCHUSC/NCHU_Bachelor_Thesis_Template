@@ -13,11 +13,18 @@ Please refer to [PDF sample document](main.pdf).
 ## Project Structure
 
 ```
-.
+├── .gitignore
 ├── README-EN.md
 ├── README.md
 ├── LICENSE
-├── STXIHEI.TTF
+├── fonts
+│   ├── simhei.ttf
+│   ├── simsun.ttc
+│   └── TimesNewRoman
+│       ├── times.ttf
+│       ├── timesbd.ttf
+│       ├── timesbi.ttf
+│       └── timesi.ttf
 ├── chapters
 │   ├── 0_abstract.tex
 │   ├── 1_chapter1.tex
@@ -70,7 +77,7 @@ Overleaf is a very convenient web-based online LaTeX editor. If you are an Overl
 
 Local compilation requires the installation of Tex softwares, such as TeX Live, MacTex and MikTeX. These softwares all come with basic LaTeX compilation tools.
 
-**Note**: The system needs to install SimSun and SimHei fonts and Time New Roman English fonts, and please do not use CTeX.
+**Note**: The system needs to install SimSun and SimHei fonts and Time New Roman English fonts, and please **do not use CTeX**. If not installed, you can manually install all the fonts in the `fonts` folder.
 
 #### Windows
 
