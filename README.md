@@ -78,7 +78,7 @@ Overleaf 是一个十分方便的网页版在线 LaTeX 编辑器。如果是 Ove
 
 本地编译需要安装 TeX 发行版软件，例如 TeX Live、MacTeX 和 MikTeX，这些发行版都自带了基本的 LaTeX 编译工具。
 
-**注意**：系统需要安装有宋体（SimSun）和黑体（SimHei）字体以及 Times New Roman 英文字体，**并请不要使用 CTeX**。如果未安装，可以手动安装 `fonts` 文件夹内的所有字体。
+**注意**：系统需要安装有宋体（SimSun），楷体（SimKai）和黑体（SimHei）字体以及 Times New Roman 英文字体，**并请不要使用 CTeX**。如果未安装，可以手动安装 `fonts` 文件夹内的所有字体。
 
 #### Windows
 

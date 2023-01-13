@@ -58,15 +58,18 @@
 
 % 论文中文题目
 \newcommand{\thesisTitle}{毕业设计（论文）题目}
-% 论文英文题目（可选）
+% 论文英文题目
 \newcommand{\thesisTitleEN}{The Subject of Undergraduate Graduation Project (Thesis) of Nanchang Hangkong University}
 
 % 在这里填写你的相关信息
-\newcommand{\deptName}{软件学院}
-\newcommand{\majorName}{软件工程}
-\newcommand{\yourName}{黄XX}
-\newcommand{\yourStudentID}{152012XX}
-\newcommand{\mentorName}{陈XX}
+\newcommand{\deptName}{测试与光电工程学院}
+\newcommand{\majorName}{生物医学工程}
+\newcommand{\yourName}{周XX}
+\newcommand{\yourNameEN}{ZHOU XXX}
+\newcommand{\yourClass}{190841}
+\newcommand{\yourStudentID}{190841XX}
+\newcommand{\mentorName}{余XX}
+\newcommand{\mentorNameEN}{YU XXX}
 % 如果你的毕设为校外毕设，请将下面这一行语句解除注释（删除第一个百分号字符）并在第二组花括号中填写你的校外毕设导师名字
 % \newcommand{\externalMentorName}{左偏树}
 
@@ -140,7 +143,7 @@
   \vspace{-8pt}
 }
 % 定义目录样式
-\titlecontents{chapter}[0pt]{\songti \zihao{-4}}
+\titlecontents{chapter}[0pt]{\songti \zihao{-3}}
 {\thecontentslabel\hspace{\ccwd}}{}
 {\hspace{.5em}\titlerule*{.}\contentspage}
 \titlecontents{section}[1\ccwd]{\songti \zihao{-4}}
@@ -340,9 +343,9 @@
 % 参考文献：如无特殊需要，参考文献相应的 TeX 文件无需改动，添加参考文献请使用 BibTeX 的格式
 %   添加至 misc/ref.bib 中，并在正文的相应位置使用 \cite{xxx} 的格式引用参考文献
 \input{misc/4_reference.tex}
-% 附录：在附录相应的 TeX 文件处进行附录部分的撰写
-\input{misc/5_appendix.tex}
 % 致谢：在致谢相应的 TeX 文件处进行致谢部分的撰写
-\input{misc/6_acknowledgements.tex}
+\input{misc/5_acknowledgements.tex}
+% 附录：在附录相应的 TeX 文件处进行附录部分的撰写
+\input{misc/6_appendix.tex}
 
 \end{document}

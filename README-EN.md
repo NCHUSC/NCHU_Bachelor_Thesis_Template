@@ -77,7 +77,7 @@ Overleaf is a very convenient web-based online LaTeX editor. If you are an Overl
 
 Local compilation requires the installation of Tex softwares, such as TeX Live, MacTex and MikTeX. These softwares all come with basic LaTeX compilation tools.
 
-**Note**: The system needs to install SimSun and SimHei fonts and Time New Roman English fonts, and please **do not use CTeX**. If not installed, you can manually install all the fonts in the `fonts` folder.
+**Note**: The system needs to install SimSun, SimKai and SimHei fonts and Time New Roman English fonts, and please **do not use CTeX**. If not installed, you can manually install all the fonts in the `fonts` folder.
 
 #### Windows
 
