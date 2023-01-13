@@ -13,39 +13,35 @@ Please refer to [PDF sample document](main.pdf).
 ## Project Structure
 
 ```
-├── .gitignore
-├── README-EN.md
-├── README.md
-├── LICENSE
-├── fonts
-│   ├── simhei.ttf
-│   ├── simsun.ttc
-│   └── TimesNewRoman
-│       ├── times.ttf
-│       ├── timesbd.ttf
-│       ├── timesbi.ttf
-│       └── timesi.ttf
-├── chapters
-│   ├── 0_abstract.tex
-│   ├── 1_chapter1.tex
-│   ├── 2_chapter2.tex
-│   ├── 3_chapter3.tex
-│   └── 4_chapter4.tex
-├── images
-│   ├── header.png
-│   └── nchu_logo.png
-├── main.pdf
-├── main.tex
-└── misc
-    ├── 0_cover.tex
-    ├── 1_originality.pdf
-    ├── 1_originality.tex
-    ├── 2_toc.tex
-    ├── 3_conclusion.tex
-    ├── 4_reference.tex
-    ├── 5_appendix.tex
-    ├── 6_acknowledgements.tex
-    └── ref.bib
+NCHU_Bachelor_Thesis_Template
+├─ .gitignore
+├─ chapters
+│  ├─ 0_abstract.tex
+│  ├─ 1_chapter1.tex
+│  ├─ 2_chapter2.tex
+│  ├─ 3_chapter3.tex
+│  └─ 4_chapter4.tex
+├─ images
+│  ├─ header.png
+│  └─ nchu_logo.png
+├─ LICENSE
+├─ main.pdf
+├─ main.tex
+├─ misc
+│  ├─ 0_cover.tex
+│  ├─ 1_originality.pdf
+│  ├─ 1_originality.tex
+│  ├─ 2_toc.tex
+│  ├─ 3_conclusion.tex
+│  ├─ 4_reference.tex
+│  ├─ 5_acknowledgements.tex
+│  ├─ 6_appendix.tex
+│  └─ ref.bib
+├─ README-EN.md
+├─ README.md
+├─ SimHei.ttf
+├─ SimKai.ttf
+└─ SimSun.ttc
 ```
 
 ## Download
@@ -77,7 +73,7 @@ Overleaf is a very convenient web-based online LaTeX editor. If you are an Overl
 
 Local compilation requires the installation of Tex softwares, such as TeX Live, MacTex and MikTeX. These softwares all come with basic LaTeX compilation tools.
 
-**Note**: The system needs to install SimSun, SimKai and SimHei fonts and Time New Roman English fonts, and please **do not use CTeX**. If not installed, you can manually install all the fonts in the `fonts` folder.
+**Note**: The system needs to install SimSun, SimKai and SimHei fonts and Time New Roman English fonts, and please **do not use CTeX**.
 
 #### Windows
 

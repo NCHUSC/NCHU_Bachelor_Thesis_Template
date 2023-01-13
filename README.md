@@ -15,39 +15,35 @@
 ## 项目结构
 
 ```
-├── .gitignore
-├── README-EN.md
-├── README.md
-├── LICENSE
-├── fonts
-│   ├── simhei.ttf
-│   ├── simsun.ttc
-│   └── TimesNewRoman
-│       ├── times.ttf
-│       ├── timesbd.ttf
-│       ├── timesbi.ttf
-│       └── timesi.ttf
-├── chapters
-│   ├── 0_abstract.tex
-│   ├── 1_chapter1.tex
-│   ├── 2_chapter2.tex
-│   ├── 3_chapter3.tex
-│   └── 4_chapter4.tex
-├── images
-│   ├── header.png
-│   └── nchu_logo.png
-├── main.pdf
-├── main.tex
-└── misc
-    ├── 0_cover.tex
-    ├── 1_originality.pdf
-    ├── 1_originality.tex
-    ├── 2_toc.tex
-    ├── 3_conclusion.tex
-    ├── 4_reference.tex
-    ├── 5_appendix.tex
-    ├── 6_acknowledgements.tex
-    └── ref.bib
+NCHU_Bachelor_Thesis_Template
+├─ .gitignore
+├─ chapters
+│  ├─ 0_abstract.tex
+│  ├─ 1_chapter1.tex
+│  ├─ 2_chapter2.tex
+│  ├─ 3_chapter3.tex
+│  └─ 4_chapter4.tex
+├─ images
+│  ├─ header.png
+│  └─ nchu_logo.png
+├─ LICENSE
+├─ main.pdf
+├─ main.tex
+├─ misc
+│  ├─ 0_cover.tex
+│  ├─ 1_originality.pdf
+│  ├─ 1_originality.tex
+│  ├─ 2_toc.tex
+│  ├─ 3_conclusion.tex
+│  ├─ 4_reference.tex
+│  ├─ 5_acknowledgements.tex
+│  ├─ 6_appendix.tex
+│  └─ ref.bib
+├─ README-EN.md
+├─ README.md
+├─ SimHei.ttf
+├─ SimKai.ttf
+└─ SimSun.ttc
 ```
 
 ## 下载方式
@@ -78,7 +74,7 @@ Overleaf 是一个十分方便的网页版在线 LaTeX 编辑器。如果是 Ove
 
 本地编译需要安装 TeX 发行版软件，例如 TeX Live、MacTeX 和 MikTeX，这些发行版都自带了基本的 LaTeX 编译工具。
 
-**注意**：系统需要安装有宋体（SimSun），楷体（SimKai）和黑体（SimHei）字体以及 Times New Roman 英文字体，**并请不要使用 CTeX**。如果未安装，可以手动安装 `fonts` 文件夹内的所有字体。
+**注意**：系统需要安装有宋体（SimSun），楷体（SimKai）和黑体（SimHei）字体以及 Times New Roman 英文字体，**并请不要使用 CTeX**。
 
 #### Windows
 
@@ -115,4 +111,3 @@ Overleaf 是一个十分方便的网页版在线 LaTeX 编辑器。如果是 Ove
 * 支持开题报告、实验报告模版等
 * 支持研究生论文模版等
 * 欢迎提交 Pull Request
-
