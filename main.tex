@@ -10,9 +10,11 @@
 % Compile with: xelatex -> biber -> xelatex -> xelatex
 
 % 章节支持、单面打印：ctexbook
-\documentclass[UTF8,AutoFakeBold,AutoFakeSlant,zihao=-4,oneside,openany]{ctexbook}
+\documentclass[UTF8,AutoFakeBold,AutoFakeSlant,zihao=-4,openany,oneside]{ctexbook}
+% 按照要求设置了左侧(内侧)装订线。
+% 如果你的毕设是双面打印，请将上一行的 oneside 删除，随后文档会在偶数页自动切换左右间距。
 \usepackage[a4paper,left=3.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
-% 目前 29mm 最接近 Word 排版
+
 \usepackage{xeCJK}
 \usepackage{titletoc}
 \usepackage{fontspec}
@@ -35,6 +37,14 @@
 \usepackage{pdfpages}
 \usepackage{float}
 \usepackage[section]{placeins}
+% 空白页设置
+\usepackage{afterpage}
+\newcommand\emptypage{
+    \null
+    \thispagestyle{empty}
+    %\addtocounter{page}{-1}
+    \newpage
+    }
 
 % 设置参考文献编译后端为 biber，引用格式为 GB/T7714-2015 格式
 % 参考文献使用宏包见 https://github.com/hushidong/biblatex-gb7714-2015
@@ -160,7 +170,7 @@
 {\thecontentslabel\hspace{\ccwd}}{}
 {\hspace{.5em}\titlerule*{.}\contentspage}
 
-% 前置页面（原创性声明、中英文摘要、目录等）
+% 前置页面（中英文摘要、目录等）
 \renewcommand{\frontmatter}{
   \pagenumbering{Roman}
   \pagestyle{NCHUThesis}
@@ -315,18 +325,19 @@
 
 % 标题页面：如无特殊需要，本部分无需改动
 \input{misc/0_cover.tex}
+% 空白页，双页打印时添加
+% \emptypage
+% 原创性声明：如无特殊需要，本部分无需改动
+\input{misc/1_originality.tex}
+% \emptypage
 
 % 前置页面定义
 \frontmatter
-% 原创性声明：如无特殊需要，本部分无需改动
-% 更改为 PDF 页面插入，如需要添加内容，可考虑先用 Word 制作再覆盖 misc/1_originality.pdf
-\includepdf{misc/1_originality.pdf}
-\newpage
-% \input{misc/1_originality.tex}
 % 摘要：在摘要相应的 TeX 文件处进行摘要部分的撰写
 \input{chapters/0_abstract.tex}
 % 目录：如无特殊需要，本部分无需改动
 \input{misc/2_toc.tex}
+% \emptypage
 
 % 正文开始
 \mainmatter
