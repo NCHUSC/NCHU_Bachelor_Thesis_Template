@@ -13,32 +13,35 @@ Please refer to [PDF sample document](main.pdf).
 ## Project Structure
 
 ```
-.
-├── README-EN.md
-├── README.md
-├── LICENSE
-├── STXIHEI.TTF
-├── chapters
-│   ├── 0_abstract.tex
-│   ├── 1_chapter1.tex
-│   ├── 2_chapter2.tex
-│   ├── 3_chapter3.tex
-│   └── 4_chapter4.tex
-├── images
-│   ├── header.png
-│   └── nchu_logo.png
-├── main.pdf
-├── main.tex
-└── misc
-    ├── 0_cover.tex
-    ├── 1_originality.pdf
-    ├── 1_originality.tex
-    ├── 2_toc.tex
-    ├── 3_conclusion.tex
-    ├── 4_reference.tex
-    ├── 5_appendix.tex
-    ├── 6_acknowledgements.tex
-    └── ref.bib
+NCHU_Bachelor_Thesis_Template
+├─ .gitignore
+├─ chapters
+│  ├─ 0_abstract.tex
+│  ├─ 1_chapter1.tex
+│  ├─ 2_chapter2.tex
+│  ├─ 3_chapter3.tex
+│  └─ 4_chapter4.tex
+├─ images
+│  ├─ header.png
+│  └─ nchu_logo.png
+├─ LICENSE
+├─ main.pdf
+├─ main.tex
+├─ misc
+│  ├─ 0_cover.tex
+│  ├─ 1_originality.pdf
+│  ├─ 1_originality.tex
+│  ├─ 2_toc.tex
+│  ├─ 3_conclusion.tex
+│  ├─ 4_reference.tex
+│  ├─ 5_acknowledgements.tex
+│  ├─ 6_appendix.tex
+│  └─ ref.bib
+├─ README-EN.md
+├─ README.md
+├─ SimHei.ttf
+├─ SimKai.ttf
+└─ SimSun.ttc
 ```
 
 ## Download
@@ -49,12 +52,14 @@ Download ZIP or `git clone`
 
 There are two methods to edit and compile LaTeX template:
 
-* [Overleaf]()
-* [Local]()
+* Overleaf
+* Local
 
 > It is recommended to use Overleaf online compliation.
 
 ### Overleaf
+
+**Strongly Recommended**
 
 Overleaf is a very convenient web-based online LaTeX editor. If you are an Overleaf premium user, you can sync with Github and even get some premium features.
 
@@ -68,7 +73,7 @@ Overleaf is a very convenient web-based online LaTeX editor. If you are an Overl
 
 Local compilation requires the installation of Tex softwares, such as TeX Live, MacTex and MikTeX. These softwares all come with basic LaTeX compilation tools.
 
-**Note**: The system needs to install SimSun and SimHei fonts and Time New Roman English fonts, and please do not use CTeX.
+**Note**: The system needs to install SimSun, SimKai and SimHei fonts and Time New Roman English fonts, and please **do not use CTeX**.
 
 #### Windows
 
@@ -90,15 +95,11 @@ You can install TeX Live or MikTeX in the system.
 
 3. Click to open the `main.tex` file, click the `√` in the lower left corner, and select the first item `Build LaTeX Project`.
 
-4. Select the first item `xelatex-> bibtex-> xelatex x 2`.
+4. Select the first item `Recipe: latexmk (xelatex)`.
 
-    In the TeX Live environment,
+    In the TeX Live environment, use xelatexmk to compile the project.
 
-    1. First use XeLaTeX to compile it
-    2. Use BibTeX to compile it again
-    3. Use XeLaTeX to compile again
-    4. If the reference number is not displayed successfully, use XeLaTeX to compile it again
-    5. If you are using MikTeX, you will be prompted to install the macro package midway. Wait util `√` is displayed again in the lower left corner, and then click to select the second item `View LaTeX PDF` to preview.
+5. If you are using MikTeX, you will be prompted to install the macro package midway. Wait util `√` is displayed again in the lower left corner, and then click to select the second item `View LaTeX PDF` to preview.
 
 ## Feedback
 

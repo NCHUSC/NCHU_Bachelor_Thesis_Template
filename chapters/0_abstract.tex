@@ -1,11 +1,13 @@
 %
 % NCHU Bachelor Thesis Template
 %
-% 南昌航空大学毕业设计（论文）中英文摘要 —— 使用 XeLaTeX 编译
+% 南昌航空大学毕业设计（论文） —— 使用 XeLaTeX 编译
 %
-% Copyright 2020 Hurley Huang
+% Copyright 2023 Arnold Chow
 %
-% The Current Maintainer of this work is Hurley Huang.
+% The Current Maintainer of this work is Arnold Chow.
+%
+% Compile with: xelatex -> biber -> xelatex -> xelatex
 
 % 中英文摘要章节
 
@@ -13,28 +15,48 @@
 \vspace*{-11mm}
 
 \begin{center}
-  \heiti\zihao{-2}\textbf{\thesisTitle}
+  \heiti\zihao{3}\textbf{\thesisTitle}
 \end{center}
 
-\vspace*{2mm}
-
-{\let\clearpage\relax \chapter*{\textmd{摘~~~~要}}}
-\addcontentsline{toc}{chapter}{摘~~~~要}
 \setcounter{page}{1}
 
-\vspace*{1mm}
+\vspace*{-5mm}
+
+\begin{center}
+  学生姓名：\selectfont{\kaishu\makebox[28mm][l]{\yourName}}
+  班级：\selectfont{\kaishu\makebox[28mm][l]{\yourClass}}  \\
+  指导老师：\selectfont{\kaishu\makebox[70mm][l]{\mentorName}}
+\end{center}
+
+\vspace*{-5mm}
 
 \setstretch{1.53}
 \setlength{\parskip}{0em}
 
 % 中文摘要正文
-论文摘要是对论文的内容不加注释和评论的简短陈述，要求扼要地说明研究工作的目的、研究方法和最终结论等，重点是结论，是一篇具有独立性和完整性的短文。
+\noindent\zihao{4}\textbf{\heiti 摘要：}
+\zihao{-4}\kaishu
+论文摘要是对论文的内容不加注释和评论的简短陈述，要求扼要地说明研究工作的目的、研究方法和最终结论等，
+重点是结论，是一篇具有独立性和完整性的短文。
 
-\textcolor{blue}{摘要正文选用模板中的样式所定义的“正文”，每段落首行缩进 2 个字符；或者手动设置成每段落首行缩进 2 个汉字，字体：宋体，字号：小四，行距：固定值 22 磅，间距：段前、段后均为 0 行。阅后删除此段。}
+\textcolor{blue}{摘要正文选用模板中的样式所定义的“正文”，每段落首行缩进 2 个字符；
+或者手动设置成每段落首行缩进 2 个汉字，字体：楷体，字号：小四，行距：固定值 22 磅，间距：段前、段后均为 0 行。阅后删除此段。}
 
-\textcolor{blue}{摘要是一篇具有独立性和完整性的短文，应概括而扼要地反映出本论文的主要内容。包括研究目的、研究方法、研究结果和结论等，特别要突出研究结果和结论。中文摘要力求语言精炼准确，本科生毕业设计（论文）摘要建议 300-500 字，一般为正文数字的5\%左右。摘要中不可出现参考文献、图、表、化学结构式、非公知公用的符号和术语。英文摘要与中文摘要的内容应一致。阅后删除此段。}
+\textcolor{blue}{摘要是一篇具有独立性和完整性的短文，应概括而扼要地反映出本论文的主要内容。
+包括研究目的、研究方法、研究结果和结论等，特别要突出研究结果和结论。
+中文摘要力求语言精炼准确，本科生毕业设计（论文）摘要建议 300-500 字，一般为正文数字的5\%左右。
+摘要中不可出现参考文献、图、表、化学结构式、非公知公用的符号和术语。
+英文摘要与中文摘要的内容应一致。阅后删除此段。}
 
-\vspace{4ex}\noindent\textbf{\heiti 关键词：南昌航空大学；本科生；毕业论文}
+\vspace{4ex}
+
+% 中文摘要关键词
+\noindent\textbf{\heiti 关键词：} 南昌航空大学；本科生；毕业论文
+\songti
+
+\vspace{4ex}
+\rightline{\heiti\textbf{指导老师签名：\makebox[38mm][c]{ }}}
+
 \newpage
 
 % 英文摘要章节
@@ -45,20 +67,29 @@
   \heiti\zihao{3}\textbf{\thesisTitleEN}
 \end{spacing}
 
-\vspace*{17mm}
+\vspace*{1mm}
 
-{\let\clearpage\relax \chapter*{
-  \zihao{-3}\textmd{Abstract}\vskip -3bp}}
-\addcontentsline{toc}{chapter}{Abstract}
-\setcounter{page}{2}
+\begin{center}
+  Student Name: \selectfont{\kaishu\makebox[38mm][l]{\yourNameEN}}
+  Class: \selectfont{\kaishu\makebox[28mm][l]{\yourClass}}  \\
+  Supervisor: \selectfont{\kaishu\makebox[84mm][l]{\mentorNameEN}}
+\end{center}
+
+\vspace*{-4mm}
 
 \setstretch{1.53}
 \setlength{\parskip}{0em}
 
 % 英文摘要正文
-The abstract is a short statement of the content of the thesis without notes and comments, which is required to briefly explain the aim of the research work, the methodology and the final conclusions, with emphasis on the conclusions. It is a short text with independence and integrity.
+\noindent\zihao{4}\textbf{Abstract:}
+\zihao{-4} The abstract is a short statement of the content of the thesis without notes and comments, which is required to briefly explain the aim of the research work, the methodology and the final conclusions, with emphasis on the conclusions. It is a short text with independence and integrity.
 
 \textcolor{blue}{Abstract 正文设置成每段落首行缩进 2 字符，字体：Times New Roman，字号：小四，行距：固定值 22 磅，间距：段前、段后均为 0 行。阅后删除此段。}
 
-\vspace{3ex}\noindent\textbf{Key Words: NCHU； Undergraduate； Graduation Thesis}
+\vspace{4ex}
+\noindent\textbf{Key Words:} NCHU; Undergraduate; Graduation Thesis
+
+\vspace{4ex}
+\rightline{\textbf{Signature of Supervisor:\makebox[38mm][c]{ }}}
+
 \newpage
