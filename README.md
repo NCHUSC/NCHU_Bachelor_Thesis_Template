@@ -15,32 +15,35 @@
 ## 项目结构
 
 ```
-.
-├── README-EN.md
-├── README.md
-├── LICENSE
-├── STXIHEI.TTF
-├── chapters
-│   ├── 0_abstract.tex
-│   ├── 1_chapter1.tex
-│   ├── 2_chapter2.tex
-│   ├── 3_chapter3.tex
-│   └── 4_chapter4.tex
-├── images
-│   ├── header.png
-│   └── nchu_logo.png
-├── main.pdf
-├── main.tex
-└── misc
-    ├── 0_cover.tex
-    ├── 1_originality.pdf
-    ├── 1_originality.tex
-    ├── 2_toc.tex
-    ├── 3_conclusion.tex
-    ├── 4_reference.tex
-    ├── 5_appendix.tex
-    ├── 6_acknowledgements.tex
-    └── ref.bib
+NCHU_Bachelor_Thesis_Template
+├─ .gitignore
+├─ chapters
+│  ├─ 0_abstract.tex
+│  ├─ 1_chapter1.tex
+│  ├─ 2_chapter2.tex
+│  ├─ 3_chapter3.tex
+│  └─ 4_chapter4.tex
+├─ images
+│  ├─ header.png
+│  └─ nchu_logo.png
+├─ LICENSE
+├─ main.pdf
+├─ main.tex
+├─ misc
+│  ├─ 0_cover.tex
+│  ├─ 1_originality.pdf
+│  ├─ 1_originality.tex
+│  ├─ 2_toc.tex
+│  ├─ 3_conclusion.tex
+│  ├─ 4_reference.tex
+│  ├─ 5_acknowledgements.tex
+│  ├─ 6_appendix.tex
+│  └─ ref.bib
+├─ README-EN.md
+├─ README.md
+├─ SimHei.ttf
+├─ SimKai.ttf
+└─ SimSun.ttc
 ```
 
 ## 下载方式
@@ -51,12 +54,13 @@ Download ZIP 或者`git clone`。
 
 有两种方式进行编辑和编译：
 
-* [Overleaf 在线编译]()
-* [本地编译]()
+* Overleaf 在线编译
+* 本地编译
 
 > 推荐使用 Overleaf 在线编译的方式。
 
 ### Overleaf 在线编译
+**强烈建议大家使用**  
 
 Overleaf 是一个十分方便的网页版在线 LaTeX 编辑器。如果是 Overleaf 会员用户的话，甚至可以与 Github 同步。
 
@@ -70,7 +74,7 @@ Overleaf 是一个十分方便的网页版在线 LaTeX 编辑器。如果是 Ove
 
 本地编译需要安装 TeX 发行版软件，例如 TeX Live、MacTeX 和 MikTeX，这些发行版都自带了基本的 LaTeX 编译工具。
 
-**注意**：系统需要安装有宋体（SimSun）和黑体（SimHei）字体以及 Times New Roman 英文字体，并请不要使用 CTeX。
+**注意**：系统需要安装有宋体（SimSun），楷体（SimKai）和黑体（SimHei）字体以及 Times New Roman 英文字体，**并请不要使用 CTeX**。
 
 #### Windows
 
@@ -92,14 +96,9 @@ Overleaf 是一个十分方便的网页版在线 LaTeX 编辑器。如果是 Ove
 
 3. 点击打开`main.tex`文件，点击左下角的`√`的符号，选择第一项`Build LaTex Project`
 
-4. 选择第一项`xelatex-> bibtex-> xelatex x 2`
+4. 选择`Recipe: latexmk (xelatex)`
 
-    即在 Tex Live 环境下，
-
-    1. 先使用 XeLaTeX 编译一遍；
-    2. 再使用 BibTeX 编译一遍；
-    3. 再使用 XeLaTeX 编译一遍；
-    4. 如果引用号码未成功显示，可以使用 XeLaTeX 再编译一遍；
+    即在 Tex Live 环境下，使用xekatexmk进行编译
 
 5. 如果是使用 MikTeX，中途会提示安装宏包。等左下角再次显示`√`，再点击，选择第二项`View LaTeX PDF`，即可进行预览。
 
@@ -112,4 +111,3 @@ Overleaf 是一个十分方便的网页版在线 LaTeX 编辑器。如果是 Ove
 * 支持开题报告、实验报告模版等
 * 支持研究生论文模版等
 * 欢迎提交 Pull Request
-
